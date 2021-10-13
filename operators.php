@@ -82,9 +82,14 @@
         echo $a;
         echo "<br />";
         echo "<hr />";
-        $a = NULL??7;
+        $a = NULL??NULL??NULL??NULL??NULL??7;
         echo $a;
         echo "<hr />";
+        $a = 5;
+        $ptr =& $a;
+        $a += 5;
+        echo "ptr = $ptr"; 
+        echo "<br />";
 
         // phpinfo();
 
