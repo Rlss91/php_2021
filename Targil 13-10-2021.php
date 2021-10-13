@@ -31,15 +31,15 @@
         echo "<ul>";
         echo "<li>";
         echo "<input type=\"radio\" name=\"animal\" id=\"animal1\" />";
-        echo "dog";
+        echo "dog " . rand(1,100);
         echo "</li>";
         echo "<li>";
         echo "<input type=\"radio\" name=\"animal\" id=\"animal2\" />";
-        echo "cat";
+        echo "cat " . rand(1,100);
         echo "</li>";
         echo "<li>";
         echo "<input type=\"radio\" name=\"animal\" id=\"animal3\" />";
-        echo "parrot";
+        echo "parrot " . rand(1,100);
         echo "</li>";
         echo "</ul>";
         echo "<button onclick = \"handleClick()\">submit</button>";
