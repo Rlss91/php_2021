@@ -42,7 +42,7 @@
         echo "parrot";
         echo "</li>";
         echo "</ul>";
-        echo "<button onclick = \"handleClick()\">submit</button>";
+        echo "<button onclick = \"handleClick()\">submit1</button>";
     
     ?>
 </body>
