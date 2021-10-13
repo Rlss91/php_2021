@@ -89,8 +89,19 @@
         $ptr =& $a;
         $a += 5;
         echo "ptr = $ptr"; 
+        echo "<hr />";
+        $a = 5;
+        $b = 7;
+        echo "$a <=> $b = " . $a<=>$b;
         echo "<br />";
-
+        $a = 5;
+        $b = 2;
+        echo "$a <=> $b = " . $a<=>$b;
+        echo "<br />";
+        $a = 5;
+        $b = 5;
+        echo "$a <=> $b = " . $a<=>$b;
+        echo "<br />";
         // phpinfo();
 
     ?>
