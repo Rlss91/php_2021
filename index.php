@@ -81,7 +81,7 @@
         } else {
             echo ">3 or <1";
         }
-
+        echo "<hr />";
     ?>
 </body>
 </html>
