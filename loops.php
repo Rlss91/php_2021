@@ -60,6 +60,13 @@
           echo '<br />';
         }
         echo "<hr />";
+        for($i=0;$i<5;$i++){
+          if(!($i % 2)){
+            echo $i;
+            echo '<br />';
+          }
+        }
+        echo "<hr />";
     ?>
   </body>
 </html>
