@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Math</title>
     <style>
         html, body{
-            font-size: 3rem;
+            font-size: 2rem;
         }
         .a{
             background: #abc;
@@ -29,7 +29,11 @@
         echo "<br />";
         echo "sqrt: " . sqrt(4);
         echo "<br />";
-        echo "round: " . round(7.5);
+        echo "round: " . round(7.5);// x.0 - x.4 => x;x.5 - x.9 => x+1
+        echo "<br />";
+        echo "ceil: " . ceil(7.1);// x+1
+        echo "<br />";
+        echo "floor: " . floor(7.9);// x
         echo "<br />";
         echo "rand: " . rand();
         echo "<br />";
