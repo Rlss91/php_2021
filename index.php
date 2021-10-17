@@ -82,6 +82,32 @@
             echo ">3 or <1";
         }
         echo "<hr />";
+        if($a >= 5 && $b >= 5){
+            echo "it is";
+        }
+        echo "<br />";
+        if($a >= 5 AND $b >= 5){
+            echo "it is";
+        }
+        echo "<br />";
+        if($a >= 5 || $b < 5){
+            echo "it is";
+        }
+        echo "<br />";
+        if($a >= 5 OR $b < 5){
+            echo "it is";
+        }
+        echo "<br />";
+        if($a == 5 XOR $a != 5){
+            echo "XOR";
+        }
+        echo "<br />";
+        if($a == 5 ^ $a != 5){
+            echo "XOR";
+        }
+        echo "<hr />";
+        echo ($a == 5 ^ $a != 5)?"XOR":"";
+        echo "<br />";
     ?>
 </body>
 </html>
