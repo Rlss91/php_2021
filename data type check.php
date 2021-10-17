@@ -18,7 +18,10 @@
         $b = '5';//$number = (int)$b;
         $c = 5.5;
         $str = "hello world";
+        $empystr = "";
         $null;
+        $O = 0;
+        $ostr = "0";
 
         echo 'is_int('.$a.'): ' . (is_int($a));
         echo "<br />";
@@ -100,6 +103,33 @@
         echo 'is_null(null): ' . (is_null(null));
         // echo "<br />";
         // echo 'is_null($null): ' . (is_null($null));
+        echo "<hr />";
+
+        echo 'isset("'.$str.'"): ' . (isset($str));
+        echo "<br />";
+        echo 'isset(null): ' . (isset($null));
+        echo "<br />";
+        // unset($str);
+        // echo 'isset("'.$str.'"): ' . (isset($str));
+        echo "<hr />";
+
+        echo 'empty('.$O.'): ' . (empty($O));
+        echo "<br />";
+        echo 'empty('.$a.'): ' . (empty($a));
+        echo "<br />";
+        echo 'empty("'.$b.'"): ' . (empty($b));
+        echo "<br />";
+        echo 'empty('.$c.'): ' . (empty($c));
+        echo "<br />";
+        echo 'empty("'.$str.'"): ' . (empty($str));
+        echo "<br />";
+        echo 'empty("'.$empystr.'"): ' . (empty($empystr));
+        echo "<br />";
+        echo 'empty("'.$ostr.'"): ' . (empty($ostr));
+        echo "<br />";
+        echo 'empty($null): ' . (empty($null));
+        echo "<br />";
+        echo 'empty(null): ' . (empty(null));
         echo "<hr />";
 
     ?>
