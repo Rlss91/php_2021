@@ -106,6 +106,16 @@
         $useExample();
         echo "a: ".$a." b: ".$b;
         echo "<hr />";
+        function reqursive($n){
+            echo $n;
+            echo "<br />";
+            if($n > 0){
+                reqursive($n-1);
+            }
+            return 0;
+        }
+        reqursive(5);
+        
     ?>
     </div>
 </body>
