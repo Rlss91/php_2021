@@ -115,7 +115,13 @@
             return 0;
         }
         reqursive(5);
-        
+        echo "<hr />";
+        function returnFunction(){
+            return function($b){
+                echo "value is ".$b;
+            };
+        }
+        returnFunction()(5);
     ?>
     </div>
 </body>
