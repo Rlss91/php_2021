@@ -31,5 +31,13 @@
             <?php endif; ?>
         <?php endfor; ?>
     </ul>
+    <div>
+        <?php if($us == "kenny"): ?>
+            <div>1</div>
+            <?php if($ps != "123456"): ?>
+                <div>2</div>
+            <?php endif; ?>        
+        <?php endif; ?>
+    </div>
 </body>
 </html>
