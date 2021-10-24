@@ -96,7 +96,11 @@
     $str = 'a,b,c,d';
     $strArr = explode(',', $str);
     echo $str . "<br />";
+    $implodeStr = implode(';', $strArr);
+    echo "explode: ";
     print_r($strArr);
+    echo "<br />";
+    echo "implode: " . $implodeStr . "<br />";
     echo "<hr />";
     $extractArr = ['key1'=>'123', 'key2'=>'234'];
     extract($extractArr);
@@ -155,6 +159,7 @@
         }
         echo "<br />";
     }
+
     ?>
 </body>
 </html>
