@@ -114,6 +114,8 @@
             }
             return $count;
         }
+
+        echo countHowMatchAbove($arr);
     ?>
 </body>
 </html>
