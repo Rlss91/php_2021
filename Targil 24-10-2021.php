@@ -82,7 +82,7 @@
             }
             $length = count($arr);
             if($length==1){
-                return 1;
+                return $arr[0];
             }
             if($length<1){
                 return 0;
