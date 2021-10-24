@@ -72,9 +72,9 @@
             }
             return $max;
         }
+
         echo findMax($arr);
         echo "<br />";
-
 
         function avgOfArray($arr){
             if(!is_array($arr)){
