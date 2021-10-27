@@ -105,7 +105,7 @@
         $str = "Hello world 999";
         $pattern = '/[0-9]{2}/';
         printMatching($pattern, $str, "{}");
-        $str = "123";
+        $str = "12345";
         $pattern = '/[0-9]{2,3}/';
         printMatching($pattern, $str, "{}");
         $str = 'My name is  and i leave in "0" city';
@@ -120,7 +120,46 @@
         $str = 'Files.png';
         $pattern = '/\.(png)$/'; 
         printMatching($pattern, $str, "(|)");
-        
+        $str = '45R_foodld6987';
+        $pattern = "/^(?=.*[A-Z])[\w]+$/"; 
+        printMatching($pattern, $str, "(?=)");
+        $str = '089878';
+        $pattern = "/^(?!.*(3|6))0[\d]+$/"; 
+        printMatching($pattern, $str, "(?!)");
+        $str = 'Asd dfg 5@';
+        echo "<hr />";
+        $pattern = "/^(?!.*\s\s)"
+        .  "(?!.*\.\.)"
+        .  "(?!.*,,)"
+        .  "[א-תA-Z][א-תa-zA-Z .,0-9@]{2,30}$/";
+        printMatching($pattern, $str, "names");
+        $str = 'foo@domain.com';
+        $pattern = "/^(?!.*\.\.)"
+                .  "[\w.\-#!$%&'*+\/=?^_`{}|~]{1,35}"
+                .  "@[\w.\-]+\.[a-zA-Z]{2,15}$/";
+        printMatching($pattern, $str, "email");
+        $str = 'Aa123456!';
+        $pattern = "/^(?=.*\d)"
+                .  "(?=.*[A-Z])"
+                .  "(?=.*[a-z])"
+                .  "(?=.*[#!*@$%^&()\-_]+)"
+                .  "[A-Za-z\d#!*@$%^&()]{6,20}$/";
+        printMatching($pattern, $str, "password");
+        $str = '0506669987';
+        $pattern = "/^(?:0(?!(5|7))(?:2|3|4|8|9))(?:-?\d){7}$"
+        .   "|^(0(?=5|7)(?:-?\d){9})$/";
+        printMatching($pattern, $str, "phone number");
+        $str = 'https://www.walla.co.il';
+        $pattern = "/^(?:http|https):\/\/"
+                .  "[a-zA-Z0-9_~:\-\/?#[\]@!$&'()*+,;=`^.%]+"
+                .  "\.[a-zA-Z0-9_~:\-\/?#[\]@!$&'()*+,;=`^.%]+$/";
+        printMatching($pattern, $str, "url");
+        $str = '255.255.255.255';
+        $pattern = "/^(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\."
+                .  "(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\."
+                .  "(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\."
+                .  "(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/";
+        printMatching($pattern, $str, "ip");
     ?>
 </body>
 </html>
