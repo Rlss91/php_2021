@@ -19,14 +19,15 @@
 
 
         */
+        
         function isObjectArr($arr){
             if(array() === $arr) return false;
             return array_keys($arr) !== range(0, count($arr)-1);
         }
         function convertToJson($arr){
-            $ret = "{";
             if(is_array($arr)){
                 if(isObjectArr($arr)){
+                    $ret = "{";
                     foreach($arr as $key => $val){
                         $ret .= '"'.$key.'":'.convertToJson($val).',';
                     }
@@ -36,6 +37,7 @@
                     $ret = '[';
                     foreach($arr as $value){
                         $ret .= convertToJson($value) . ',';
+                        //$ret += convertToJson($value) + ',';//js
                     }
                     $ret = substr($ret, 0, -1) . ']';
                     return $ret;
