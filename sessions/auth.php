@@ -46,6 +46,11 @@
                 $_SESSION['login_err'] = 'email or password not good';
                 header('Location: login.php');
             } else {
+                setcookie("rememberme", 0);
+                if(isset($_POST["rememberme"]) && $_POST["rememberme"]){
+                    setcookie("rememberme", 1, time()+3600);
+                    // setcookie("rememberme", 1);
+                }
                 header('Location: admin.php');
             }
         } else {

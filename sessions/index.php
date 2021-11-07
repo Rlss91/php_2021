@@ -1,3 +1,14 @@
+<?php 
+
+    if(!isset($_COOKIE["rememberme"])){
+        echo "rememberme not defined ";
+        session_start();
+        session_destroy();
+    } else {
+        echo "rememberme: " . $_COOKIE["rememberme"];
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

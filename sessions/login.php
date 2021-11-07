@@ -1,4 +1,5 @@
 <?php 
+    session_set_cookie_params(60*60*24);
     session_start();
 
 ?>
@@ -26,6 +27,13 @@
                 <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
                 <div class="col-sm-10">
                 <input type="password" class="form-control" id="inputPassword3" name="password">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="inputPassword4" class="col-sm-2 col-form-label">Remember me</label>
+                <div class="col-sm-10">
+                <!-- <input type="checkbox" class="form-control" id="inputPassword4" name="rememberme"> -->
+                <input type="checkbox"  id="inputPassword4" name="rememberme">
                 </div>
             </div>
             <button type="submit" class="btn btn-primary">Sign in</button>
