@@ -5,9 +5,12 @@ if (!file_exists($target_dir)) {
     mkdir($target_dir, 0777, true);
 }
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+echo "name: " . $_FILES["fileToUpload"]["name"] . "<br>";
+echo "basename: " . basename($_FILES["fileToUpload"]["name"]) . "<br>";
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-
+echo "imageFileType: $imageFileType <br>";
+echo "tmp_name: " . $_FILES["fileToUpload"]["tmp_name"] . " <br>";
 // Check if image file is a actual image or fake image
 if(isset($_POST["submit"])) {
   $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
@@ -27,6 +30,7 @@ if (file_exists($target_file)) {
 }
 
 // Check file size
+echo "size: " . $_FILES["fileToUpload"]["size"] . "<br>";
 if ($_FILES["fileToUpload"]["size"] > 500000) {
   echo "Sorry, your file is too large.";
   $uploadOk = 0;
