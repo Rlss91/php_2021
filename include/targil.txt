@@ -1,0 +1,6 @@
+*) create list of names and save it on saperate file
+*) let the user sort the list of names
+*) let the user submit one latter and the website will show all names that starts with this latter
+*) if there is not names then show msg
+*) the query param must be saved in cookie
+
