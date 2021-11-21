@@ -25,7 +25,7 @@
             echo json_encode(["msg" => 'err']);
         }
 
-    }else {
+    } else {
         echo json_encode(['msg'=>'err']);
     }
 
