@@ -5,10 +5,14 @@
     $sql = "SELECT *, id as 'user_id' FROM users;";
     echo "sql: $sql <br>";
     $result = mysqli_query($link, $sql);
-
-    if($result && mysqli_num_rows($result)>0){
+    $numrows = mysqli_num_rows($result);
+    $affectedrows = mysqli_affected_rows($link);
+    echo "affectedrows = $affectedrows <br>";
+    echo "numrows = $numrows <hr>";
+    if($result && $numrows>0){
         while($row = mysqli_fetch_assoc($result)){
             print_r($row);
+            echo "<hr>";
         }
     }
 
