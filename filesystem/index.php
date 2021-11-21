@@ -56,4 +56,3 @@
     }
 
     rmDirRe("files/test2");
-
